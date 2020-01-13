@@ -1,0 +1,38 @@
+<navbar></navbar>
+
+
+    <table class="table text-center">
+        <thead class="thead-dark ">
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Contacts</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>Password</th>
+            <th>Shift</th>
+            <th>Product</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+          <tr *ngFor='let employee of employees'>
+            <td>{{employee.id}}</td>
+            <td>{{employee.employee_name}}</td>
+            <td>{{employee.employee_address}}</td>
+            <td>{{employee.contacts}}</td>
+            <td>{{employee.employee_email}}</td>
+            <td>{{employee.salary}}</td>
+            <td>{{employee.password}}</td>
+            <td>{{employee.shift.shift_id}}</td>
+            <td>{{employee.product.name}}</td>
+            <td>
+              <button class="btn btn-outline-success " (click)="insertSign(employee.id)">SignIn</button>
+              <button class="btn btn-outline-danger ml-2" (click)="insertSignout(employee.id)">SignOut</button>
+            </td>
+         </tr> 
+          </tbody>
+          </table>
+        

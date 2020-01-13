@@ -1,0 +1,43 @@
+<navbar></navbar>
+<!--Fontawesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<div class="background">
+<div class="container">
+   <div class="d-flex justify-content-center h-100">
+       <div class="card">
+           <div class="card-header">
+               <h3>Shift Creation </h3>
+           </div>
+           <div class="card-body">
+               <form>
+                   <!---From-->
+                   <div class="input-group form-group">
+                       <div class="input-group-prepend">
+                           <span class="input-group-text"><i class="fas fa-angle-double-right"></i></span>
+                       </div>
+                       <input type="text" class="form-control" placeholder="From" [(ngModel)]="shift.shift_from" name="from">
+                       </div>
+                   <!---To-->
+                   <div class="input-group form-group">
+                       <div class="input-group-prepend">
+                           <span class="input-group-text"><i class="fas fa-angle-double-left"></i></span>
+                       </div>
+                       <input type="text" class="form-control" placeholder="To" [(ngModel)]="shift.shift_to" name="to">
+                       </div>
+                   <!---Working Days-->
+                   <div class="input-group form-group">
+                       <div class="input-group-prepend">
+                           <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
+                       </div>
+                       <input type="text" class="form-control" placeholder="Working Days" [(ngModel)]="shift.working_days" name="days">
+                       </div>
+                   <div class="form-group">
+                       <input type="submit" value="Submit" class="btn float-right signup_btn" (click)="updateShift()">
+                   </div>
+               </form>
+           </div>
+       </div>
+   </div>
+</div>
+</div>

@@ -1,0 +1,106 @@
+<navbar></navbar>
+
+ <!--Fontawesome -->
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<!-- Sign in-->
+<div class="background">
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Sing Up</h3>
+			</div>
+			<div class="card-body">
+				<form > 
+                    <!---user name-->
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" name="employee_name"required [(ngModel)]="employee.employee_name" class="form-control" placeholder="Name">
+						</div>
+					<!---E-mail-->
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-envelope"></i></span>
+						</div>
+						<input type="text" name="employee_email"required [(ngModel)]="employee.employee_email" class="form-control" placeholder="E-mail">
+						</div>
+					<!---Address-->
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+						</div>
+						<input type="text" name="employee_address"required [(ngModel)]="employee.employee_address"class="form-control" placeholder="Address">
+						</div>
+					<!---Phone Number-->
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-phone-volume"></i></span>
+						</div>
+						<input type="text"name="contacts"required [(ngModel)]="employee.contacts" class="form-control" placeholder="Phone Number">
+                        </div>
+                   <!---password-->
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" name="password" required [(ngModel)]="employee.password" class="form-control" placeholder="password">
+					</div>
+					<!---Product-->
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-poll-h"></i></span>
+						</div>
+						<input type="text" [(ngModel)]="employee.product" class="form-control" placeholder="Product">
+						</div>
+					<!---image-->
+					<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-camera"></i></span>
+							</div>
+							<input type="upload" name="image"required [(ngModel)]="employee.image" class="form-control"  placeholder="image"	>
+
+							<input 
+								style="display: none"
+								type="file" (change)="onFileChanged($event)"
+								#fileInput>
+								<button (click)="fileInput.click()">Select File</button> 
+							</div>
+					ShiftTime
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-clock"></i></span>
+						</div>
+						<select>                                                                
+							<input class="form-control" [(ngModel)]="from" placeholder="Shift-Time">				  
+							<option value="{{8}}">08 am</option>								  
+							<option value="{{4}}">04 pm</option>								  
+							<option value="{{12}}">12 am</option>								  
+						  </select>	
+						  
+						  <div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-building"></i></span>
+						</div>
+						  <select [(ngModel)]="employee.department">                                                                
+							<input class="form-control" placeholder="Shift-Time">				  
+							<option value="{{1}}">dep 1</option>								  
+							<option value="{{2}}">dep 2</option>								  
+							<option value="{{3}}">dep 3</option>								  
+						  </select>
+						  <div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user-shield"></i></span>
+						</div>
+						  	
+						</div>
+							
+					<div class="form-group">
+						<button type="submit" class="btn float-right signup_btn" (click)="createEmployee()">
+						Create User</button>
+					</div>
+                </form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

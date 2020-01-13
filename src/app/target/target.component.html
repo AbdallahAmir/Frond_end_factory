@@ -1,0 +1,25 @@
+<navbar></navbar>
+<navbar></navbar>
+
+<table class="table text-center">
+    <thead class="thead-dark ">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Product</th>
+        <th>Target</th>
+        <th>Shift</th>
+      </tr>
+    </thead>
+    <tbody>
+     
+      <tr *ngFor='let employee of employees'>
+        <td>{{employee.id}}</td>
+        <td>{{employee.employee_name}}</td>
+        <td>{{employee.product!==null?employee.product.name:null}}</td>
+        <td>{{employee.product.target}}</td>
+        <td>{{employee.shift.shift_id}}</td>
+        
+     </tr> 
+      </tbody>
+      </table>

@@ -1,0 +1,27 @@
+.background{
+    background-image: url(src\assets\newone.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position:absolute;
+    width: 94%;
+    height: 96.5%;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+
+    .card-body{
+        margin-right: 4px;
+        margin-top: 15px;
+        width: 1285px;
+        height: 625px;
+        background-color:#E6E6E6;
+        opacity: 0.6;
+        
+}
+
+        .text1{
+            text-align: center  ;
+            margin-top: 250px;
+            font-size: 72px;
+            color: black;
+        }

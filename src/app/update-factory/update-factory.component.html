@@ -1,0 +1,66 @@
+<navbar></navbar>
+<!--Fontawesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<div class="background">
+<div class="container">
+   <div class="d-flex justify-content-center h-100">
+       <div class="card">
+           <div class="card-header">
+               <h3>Update Factory</h3>
+           </div>
+           <div class="card-body">
+               <form>
+                   <!---building name-->
+                   <div class="input-group form-group">
+                       <div class="input-group-prepend">
+                           <span class="input-group-text"><i class="fas fa-industry"></i></span>
+                       </div>
+                       <input type="text" name="factory_name" class="form-control"required [(ngModel)]="factory.factory_name" placeholder="Factory name...">
+                       </div>
+                   <!---Building-->
+                   <div class="input-group form-group">
+                       <div class="input-group-prepend">
+                           <span class="input-group-text"><i class="fas fa-industry"></i></span>
+                       </div>
+                       <input type="number" name="buildings"class="form-control"required [(ngModel)]="factory.buildings" placeholder="Building">
+                       </div>
+                   <!---Floors-->
+                   <div class="input-group form-group">
+                       <div class="input-group-prepend">
+                           <span class="input-group-text"><i class="fas fa-align-justify"></i></span>
+                       </div>
+                       <input type="number" name="floors" class="form-control" required [(ngModel)]="factory.floors" placeholder="Floors">
+                       </div>
+                   <!---Industry-->
+                   <div class="input-group form-group">
+                       <div class="input-group-prepend">
+                           <span class="input-group-text"><i class="fas fa-industry"></i></span>
+                       </div>
+                       <input type="text" name="industries" class="form-control" required [(ngModel)]="factory.industry" placeholder="Industry...">
+                       </div>
+                  <!---Location-->
+                  <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-search-location"></i></span>
+                    </div>
+                    <input type="text" name="location" class="form-control" required [(ngModel)]="factory.location" placeholder="Location...">
+                    </div>
+                 <!---Owner-->
+                   <div class="input-group form-group">
+                       <div class="input-group-prepend">
+                           <span class="input-group-text"><i class="fas fa-book-reader"></i></span>
+                       </div>
+                       <input type="text" name="owenrname" class="form-control" required [(ngModel)]="factory.ownerName" placeholder="Owner...">
+                       </div>
+                           
+                   <div class="form-group">
+                       <input type="submit" value="get factory information" class="btn float-right signup_btn"  (click)="getFactory(factory.factory_id)">
+                       <input type="submit" value="Update" class="btn float-right signup_btn" id="factory" (click)="updateFactory(factory.factory_id,factory)">
+                   </div>
+               </form>
+           </div>
+       </div>
+   </div>
+</div>
+</div>

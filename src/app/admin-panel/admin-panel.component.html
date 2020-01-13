@@ -1,0 +1,31 @@
+<table class="table text-center">
+  <thead class="thead-dark">
+    <tr>
+      <th>Product_Id</th>
+      <th>Product_Name</th>
+      <th>Product_Price</th>
+      <th>Product_Description</th>
+      <th>Product_quantity</th>
+
+      <th>Product_Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+   
+    <tr *ngFor="let product of PRODUCTS;let  i=index">
+      <td>{{product[i].id}}</td>
+      <td>{{product[i].name}}</td>
+      <td>${{product[i].price}}</td>
+      <td>{{product[i].description}}</td>
+      <td>{{product[i].quantity}}</td>
+
+      <td><button class="btn btn-primary mr-2" type="submit">Edit</button>
+        <button class="btn btn-danger" type="submit">Delete</button>
+
+      </td>
+   
+   </tr> 
+    </tbody>
+    </table>
+  
+  

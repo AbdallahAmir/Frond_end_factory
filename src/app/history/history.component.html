@@ -1,0 +1,21 @@
+<navbar></navbar>
+
+<table class="table text-center">
+    <thead class="thead-dark ">
+      <tr>
+        <th>Emp_Id</th>
+        <th>Emp_Name</th>
+        <th>Emp_From</th>
+        <th>Emp_to</th>
+      </tr>
+    </thead>
+    <tbody>
+     
+      <tr *ngFor='let sign of signs'>
+        <td>{{sign.employee.id}}</td>
+        <td>{{sign.employee.employee_name}}</td>
+        <td>{{sign.sign_in}}</td>
+        <td>{{sign.sign_out}}</td>   
+     </tr> 
+      </tbody>
+      </table>
